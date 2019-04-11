@@ -17,6 +17,7 @@
 					<div class="nav-item"><div class="item-text" id="3">Products</div></div><br>
 					<div class="nav-item"><div class="item-text" id="4">News</div></div><br>
 					<div class="nav-item"><div class="item-text" id="5">Contacts</div></div><br>
+                    <div class="nav-item"><div class="item-text" id="6"><a href="/users.php">Users</a></div></div><br>
 				</div>
 			</div>
 		</div>
