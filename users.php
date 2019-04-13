@@ -30,7 +30,8 @@
                 echo "<th>Home Phone</th>";
                 echo "<th>Cell Phone</th>";
                 echo "</tr>";
-                while ($row = mysqli_fetch_array($res)) {
+		while ($row = mysqli_fetch_array($res)) {
+		    echo "$row";
                     echo "<tr>";
                     echo "<td>".$row['first_name']."</td>";
                     echo "<td>".$row['last_name']."</td>";
