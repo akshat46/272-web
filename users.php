@@ -3,9 +3,10 @@
 $servername = "localhost";
 $username = "leap-user";
 $password = "leap123456";
+$dbname = "leap";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
@@ -52,7 +53,7 @@ else{
         die();
     }
 
-    $sql = "INSERT INTO users (first_name, last_name, email, address, home_phone, cell_phone) VALUES ('$firename', '$lastname', '$email', '$address', '$homephone', '$mobilephone')";
+    $sql = "INSERT INTO users (first_name, last_name, email, address, home_phone, cell_phone) VALUES ('$firstname', '$lastname', '$email', '$address', '$homephone', '$mobilephone')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New user added successfully";
