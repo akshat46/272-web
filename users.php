@@ -1,3 +1,4 @@
+<body>
 <?php
 $servername = "localhost";
 $username = "leap-user";
@@ -14,12 +15,7 @@ if ($conn->connect_error) {
 extract($_POST);
 
 if(isset ($SearchUser)){
-    $sql = "SELECT * FROM Users WHERE
-        first_name = $firstname" OR
-        last_name = $lastname OR
-        email = $email OR
-        home_phone = $homephone OR
-        cell_phone = $mobilephone;
+    $sql = 'SELECT * FROM Users WHERE first_name = {$firstname}" OR last_name = {$lastname} OR email = {$email} OR home_phone = {$homephone} OR cell_phone = {$mobilephone}';
     if ($res = mysqli_query($link, $sql)) {
         if (mysqli_num_rows($res) > 0) {
             echo "<table>";
@@ -50,7 +46,7 @@ if(isset ($SearchUser)){
     }
 }
 else{
-    if(!$firstname || !$lastname || !$email || !$address || $homephone || $mobilephone)){
+    if(!$firstname || !$lastname || !$email || !$address || $homephone || $mobilephone){
         fieldsBlank();
         die();
     }
@@ -64,9 +60,11 @@ else{
     }
 }
 
-$conn->close()
+$conn->close();
 
 function fieldsBlank(){
     print("<h1>All fields should be filled.</h2>");
 }
 ?>
+
+</body>
