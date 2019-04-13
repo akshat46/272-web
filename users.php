@@ -30,8 +30,8 @@
                 echo "<th>Home Phone</th>";
                 echo "<th>Cell Phone</th>";
                 echo "</tr>";
-		while ($row = mysqli_fetch_array($res)) {
-		    echo "$row";
+                while ($row = $result->fetch_assoc()) {
+                    //echo '<pre>'; print_r($array); echo '</pre>';
                     echo "<tr>";
                     echo "<td>".$row['first_name']."</td>";
                     echo "<td>".$row['last_name']."</td>";
@@ -42,7 +42,7 @@
                     echo "</tr>";
                 }
                 echo "</table>";
-                mysqli_free_res($res);
+                mysqli_free_res($result);
             }
             else {
                 echo "No matching records are found.";
