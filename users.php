@@ -46,14 +46,8 @@ if(isset ($SearchUser)){
     }
 }
 else{
-    echo "first name: $firstname";
-    echo "last name: $lastname";
-    echo "email: $email";
-    echo "address: $address";
-    echo "home phone: $homephone";
-    echo "cell phone: $mobilephone";
 
-    if(!$firstname || !$lastname || !$email || !$address || $homephone || $mobilephone){
+    if(!$firstname || !$lastname || !$email || !$address || !$homephone || !$mobilephone){
         fieldsBlank();
         die();
     }
