@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 extract($_POST);
 
 if(isset ($SearchUser)){
-    $sql = 'SELECT * FROM Users WHERE first_name = {$firstname}" OR last_name = {$lastname} OR email = {$email} OR home_phone = {$homephone} OR cell_phone = {$mobilephone}';
+    $sql = 'SELECT * FROM Users WHERE first_name = '$firstname' OR last_name = '$lastname' OR email = '$email' OR home_phone = '$homephone' OR cell_phone = '$mobilephone'';
     if ($res = mysqli_query($link, $sql)) {
         if (mysqli_num_rows($res) > 0) {
             echo "<table>";
