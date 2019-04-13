@@ -1,4 +1,5 @@
 <body>
+    <link rel="stylesheet" type="text/css" href="table.css">
     <?php
     $servername = "localhost";
     $username = "leap-user";
@@ -21,7 +22,7 @@
         if ($result = $conn->query($sql)) {
             if ($result->num_rows > 0) {
                 echo "<h2>Search Results:</h2>";
-                echo "<table>";
+                echo '<table class="zui-table">';
                 echo "<tr>";
                 echo "<th>Firstname</th>";
                 echo "<th>Lastname</th>";
@@ -72,4 +73,4 @@
     }
     ?>
 
-</body>
+    </body>
