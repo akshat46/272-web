@@ -16,10 +16,13 @@ if ($conn->connect_error) {
 extract($_POST);
 
 if(isset ($SearchUser)){
-    $sql = 'SELECT * FROM Users WHERE first_name = '$firstname' OR last_name = '$lastname' OR email = '$email' OR home_phone = '$homephone' OR cell_phone = '$mobilephone'';
+	echo 'here';
+	//$sql = 'SELECT * FROM Users WHERE first_name = '$firstname' OR last_name = '$lastname' OR email = '$email' OR home_phone = '$homephone' OR cell_phone = '$mobilephone'';
+	$sql = "SELECT * FROM users WHERE first_name = '$firstname'";
     if ($res = mysqli_query($link, $sql)) {
         if (mysqli_num_rows($res) > 0) {
-            echo "<table>";
+	    echo "<h2>Search Results:</h2>";	
+	    echo "<table>";
             echo "<tr>";
             echo "<th>Firstname</th>";
             echo "<th>Lastname</th>";
