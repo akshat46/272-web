@@ -52,7 +52,7 @@ else{
         die();
     }
 
-    $sql = "INSERT INTO users (first_name, last_name, email, address, home_phone, cell_phone) VALUES ($firename, $lastname, $email, $address,$homephone, $mobilephone)";
+    $sql = "INSERT INTO users (first_name, last_name, email, address, home_phone, cell_phone) VALUES ('$firename', '$lastname', '$email', '$address', '$homephone', '$mobilephone')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New user added successfully";
