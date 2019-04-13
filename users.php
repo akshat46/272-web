@@ -18,7 +18,7 @@
     if(isset ($SearchUser)){
         echo 'here';
         $sql = "SELECT * FROM users WHERE first_name = '$firstname' OR last_name = '$lastname' OR email = '$email' OR home_phone = '$homephone' OR cell_phone = '$mobilephone'";
-        if ($result = $conn->query($sql);) {
+        if ($result = $conn->query($sql)) {
             if ($result->num_rows > 0) {
                 echo "<h2>Search Results:</h2>";
                 echo "<table>";
