@@ -17,8 +17,7 @@
 
     if(isset ($SearchUser)){
         echo 'here';
-        //$sql = "SELECT * FROM users WHERE first_name = '$firstname' OR last_name = '$lastname' OR email = '$email' OR home_phone = '$homephone' OR cell_phone = '$mobilephone'";
-        $sql = "SELECT * FROM users WHERE first_name = '$firstname'";
+        $sql = "SELECT * FROM users WHERE first_name = '$firstname' OR last_name = '$lastname' OR email = '$email' OR home_phone = '$homephone' OR cell_phone = '$mobilephone'";
         if ($result = $conn->query($sql);) {
             if ($result->num_rows > 0) {
                 echo "<h2>Search Results:</h2>";
@@ -33,12 +32,12 @@
                 echo "</tr>";
                 while ($row = mysqli_fetch_array($res)) {
                     echo "<tr>";
-                    echo "<td>".$row['Firstname']."</td>";
-                    echo "<td>".$row['Lastname']."</td>";
-                    echo "<td>".$row['Age']."</td>";
-                    echo "<td>".$row['Address']."</td>";
-                    echo "<td>".$row['Home Phone']."</td>";
-                    echo "<td>".$row['Cell Phone']."</td>";
+                    echo "<td>".$row['first_name']."</td>";
+                    echo "<td>".$row['last_name']."</td>";
+                    echo "<td>".$row['email']."</td>";
+                    echo "<td>".$row['address']."</td>";
+                    echo "<td>".$row['home_phone']."</td>";
+                    echo "<td>".$row['cell_phone']."</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
