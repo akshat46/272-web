@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title></title>
 </head>
-<link rel="stylesheet" type="text/css" href="table.css">
 <body>
+<link rel="stylesheet" type="text/css" href="table.css">
   <?php
   $services = array("service_0","service_1","service_2","service_3","service_4","service_5","service_6","service_7","service_8","service_9");
   echo "<h2>Services:</h2>";
