@@ -47,10 +47,49 @@
   echo "</tr>";
   foreach ($lastviewed as $key => $value) {
     echo "<tr>";
-    echo "<td>".$key."</td>";
+    echo "<td>".$key+1."</td>";
     echo "<td>".$value."</td>";
     echo "</tr>";
   }
   echo "</table>";
+
+  $mostviewed = array();
+
+  foreach ($services as $key => $value) {
+    if(!getCount($value)){
+      continue;
+    }
+    $mostviewed[$value] = getCount($value);
+  }
+
+  arsort($mostviewed);
+  $index = 0;
+
+  echo "<h2>Most Viewed Services:</h2>";
+  echo '<table class="zui-table">';
+  echo "<tr>";
+  echo "<th>#</th>";
+  echo "<th>Title</th>";
+  echo "<th>Count</th>";
+  echo "</tr>";
+  foreach ($mostviewed as $key => $value) {
+    echo "<tr>";
+    echo "<td>".$index+1."</td>";
+    echo "<td>".$key."</td>";
+    echo "<td>".$value."</td>";
+    echo "</tr>";
+    if($index==4){
+      break;
+    }
+    $index++;
+  }
+  echo "</table>";
+
+  function getCount($service){
+    if(isset($_COOKIE[$service])){
+      return $_COOKIE[$service];
+    }
+    else return false;
+  }
   ?>
 </body>
