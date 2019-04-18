@@ -13,9 +13,11 @@
     echo "<tr>";
     echo "<td>".$key."</td>";
     echo "<td>".$value."</td>";
-    echo '<td><a href="/'.$value.'.php">Link</a></td>';
+    echo '<td><a href="/services/'.$value.'.php">Link</a></td>';
     echo "</tr>";
   }
   echo "</table>";
+
+  $lastViewed;
   ?>
 </body>
