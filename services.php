@@ -47,7 +47,7 @@
   echo "</tr>";
   foreach ($lastviewed as $key => $value) {
     echo "<tr>";
-    echo "<td>".$key+1."</td>";
+    echo "<td>".($key+1)."</td>";
     echo "<td>".$value."</td>";
     echo "</tr>";
   }
@@ -74,7 +74,7 @@
   echo "</tr>";
   foreach ($mostviewed as $key => $value) {
     echo "<tr>";
-    echo "<td>".$index+1."</td>";
+    echo "<td>".($index+1)."</td>";
     echo "<td>".$key."</td>";
     echo "<td>".$value."</td>";
     echo "</tr>";
