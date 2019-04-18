@@ -207,6 +207,7 @@
 	$("#3").click(function(){
 		$("#title").html("Products");
 		$("#content").html("<br><strong>Free Trial</strong> includes a Leap 8 years from the end of your teenage to a semi-luxurious life,  with a job in reputative company, weekend blasts, and an exclusive loss of sense of purpose! <br><br> <strong>Platinum package</strong> is where you would want to be. Leap all the way to the time when you have the keys to your own house, two cars, a well settled family (two human partners and 1-3 pets), and an age where you are too old to go to house parties but capable of compensating for it with your artsy vacation instagram!");
+		$(".content").append('<a href="/services.php">More Services</a>');
 	});
 
 	$("#4").click(function(){
