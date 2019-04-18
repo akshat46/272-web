@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title></title>
-</head>
 <body>
 <link rel="stylesheet" type="text/css" href="table.css">
   <?php
@@ -25,5 +19,3 @@
   echo "</table>";
   ?>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-</html>
