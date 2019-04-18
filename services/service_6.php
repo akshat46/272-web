@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <?php
+if(isset($_COOKIE["service_6"])){
+    $count = $_COOKIE["service_6"];
+    $count += 1;
+    setcookie("service_6", $count, time() + (86400 * 30), "/"); // 86400 = 1 day
+}
+else{
+    setcookie("service_6", 1, time() + (86400 * 30), "/"); // 86400 = 1 day
+}
 $lv_1 = "service_6";
 $lv_2 = "";
 $lv_3 = "";
