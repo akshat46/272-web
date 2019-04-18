@@ -19,24 +19,24 @@
   echo "</table>";
 
   $lastviewed = array();
-  if(isset($_COOKIE[$lv_1])){
-    $lv_1 = $_COOKIE[$lv_1];
+  if(isset($_COOKIE["lv_1"])){
+    $lv_1 = $_COOKIE["lv_1"];
     array_push($lastviewed, $lv_1);
   }
-  if(isset($_COOKIE[$lv_2])){
-    $lv_2 = $_COOKIE[$lv_2];
+  if(isset($_COOKIE["lv_2"])){
+    $lv_2 = $_COOKIE["lv_2"];
     array_push($lastviewed, $lv_2);
   }
-  if(isset($_COOKIE[$lv_3])){
-    $lv_3 = $_COOKIE[$lv_3];
+  if(isset($_COOKIE["lv_3"])){
+    $lv_3 = $_COOKIE["lv_3"];
     array_push($lastviewed, $lv_3);
   }
-  if(isset($_COOKIE[$lv_4])){
-    $lv_4 = $_COOKIE[$lv_4];
+  if(isset($_COOKIE["lv_4"])){
+    $lv_4 = $_COOKIE["lv_4"];
     array_push($lastviewed, $lv_4);
   }
-  if(isset($_COOKIE[$lv_5])){
-    $lv_5 = $_COOKIE[$lv_5];
+  if(isset($_COOKIE["lv_5"])){
+    $lv_5 = $_COOKIE["lv_5"];
     array_push($lastviewed, $lv_5);
   }
   echo "<h2>Last Viewed Services:</h2>";

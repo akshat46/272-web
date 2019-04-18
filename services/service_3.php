@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-$lv_1 = "service_0";
+$lv_1 = "service_3";
 $lv_2 = "";
 $lv_3 = "";
 $lv_4 = "";
@@ -17,7 +17,17 @@ if(isset($_COOKIE[$lv_3])){
 if(isset($_COOKIE[$lv_4])){
     $lv_5 = $_COOKIE[$lv_4];
 }
-setcookie($lv_1, $lv_2, $lv_3, $lv_4, $lv_5, time() + (86400 * 30), "/");
+
+$cookie_name = "lv_1";
+setcookie($cookie_name, $lv_1, time() + (86400 * 30), "/"); // 86400 = 1 day
+$cookie_name = "lv_2";
+setcookie($cookie_name, $lv_2, time() + (86400 * 30), "/"); // 86400 = 1 day
+$cookie_name = "lv_3";
+setcookie($cookie_name, $lv_3, time() + (86400 * 30), "/"); // 86400 = 1 day
+$cookie_name = "lv_4";
+setcookie($cookie_name, $lv_4, time() + (86400 * 30), "/"); // 86400 = 1 day
+$cookie_name = "lv_5";
+setcookie($cookie_name, $lv_5, time() + (86400 * 30), "/"); // 86400 = 1 day
 ?>
 <html>
 <body>
