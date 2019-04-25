@@ -17,7 +17,7 @@
     $sql = "SELECT * FROM users";
     if ($result = $conn->query($sql)) {
         if ($result->num_rows > 0) {
-            echo "<h2>Search Results:</h2>";
+            echo "<h2>All Users from Akshat's application:</h2>";
             echo '<table class="zui-table">';
             echo "<tr>";
             echo "<th>Firstname</th>";
