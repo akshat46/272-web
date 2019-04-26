@@ -39,7 +39,7 @@
                 echo "</tr>";
             }
             echo "</table>";
-            mysqli_free_res($result);
+            //mysqli_free_res($result);
         }
         else {
             echo "No users found.";

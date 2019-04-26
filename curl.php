@@ -1,15 +1,13 @@
-<body>
-    <link rel="stylesheet" type="text/css" href="table.css">
-    <?php
+<?php
 
     include 'allUsers.php';
 
+    echo "testing curl";
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://165.227.54.167/allUsers.php");
+    echo "testign curl2";
+    curl_setopt($ch, CURLOPT_URL, "http://www.roopeshrai.com/myusers.php");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $contents = curl_exec ($ch);
     echo $contents;
     curl_close ($ch);
-    ?>
-
-</body>
+?>
