@@ -7,7 +7,7 @@
 	</head>
 	<link rel="stylesheet" type="text/css" href="rating.css">
 	<body onload="showRestaurantData('<?php
-		$url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 		echo $url;
 	?>')">
 		<div class="rating-system">
