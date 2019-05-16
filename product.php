@@ -7,8 +7,13 @@
 	</head>
 	<link rel="stylesheet" type="text/css" href="rating.css">
 	<body onload="showRestaurantData('<?php
-		$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-		echo $url;
+		$url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		echo str_replace_first('product', 'getProductData', $url);
+
+		function str_replace_first($from, $to, $content){
+			$from = '/'.preg_quote($from, '/').'/';
+			return preg_replace($from, $to, $content, 1);
+		}
 	?>')">
 		<div class="rating-system">
 			<form>
