@@ -1,14 +1,15 @@
-<?php
-$url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-?>
-<<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
 		<title></title>
 	</head>
 	<link rel="stylesheet" type="text/css" href="rating.css">
-	<body onload="showRestaurantData(<?php echo $url?>)">
+	<body onload="showRestaurantData(<?php
+	$url = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	echo $url;
+	?>)">
 		<div class="rating-system">
 			<form>
 				<div class="stars">
